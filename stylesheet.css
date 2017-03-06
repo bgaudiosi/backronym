@@ -1,0 +1,78 @@
+/* Get rid of default browser stylesheet */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/* border-style: solid;
+	border-width: 1px; */
+}
+/* Set background image and general font */
+body {
+	font-family: 'Source Sans Pro';
+	/* background-image: url("images/meeting.png"); */
+    background-color: #00BFFF;
+	background-position: 0 7em;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-height: 500px;
+    font-size: 24px;
+}
+
+/* Header content */
+.header {
+    
+}
+
+.intro {
+	text-align: center;
+	position: relative;
+    color: white;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+.user-input {
+    margin: 1em;
+    width: 20em;
+    height: 2.5em;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #1E90FF;
+}
+
+.content {
+    color: white;
+    margin-left: 10em;
+}
+.content>h2{
+    font-size: 4em;
+    display: inline;
+    text-transform: uppercase;
+}
+
+.content>p {
+    font-size: 2em;
+    display: inline;
+}
+/* footer content */
+
+.footer {
+	clear: both;
+	background-color: #333;
+	position: relative;
+	z-index: 5;
+	height: 3em;
+	margin-top: -3em;
+	text-align: center;
+	color: white;
+	padding-top:1em;
+	font-size: 0.5em;
+}
+
+
+
+
+.
