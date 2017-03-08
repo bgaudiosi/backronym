@@ -1,2 +1,4 @@
 # backronym
-Turns a word or assortment of letters into an acronym.
+Turns a word or assortment of letters into an acronym. Useful for studying and memorizing things. 
+
+It does this using a formula that is meant to create coherent, memorable backronyms.
