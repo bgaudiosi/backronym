@@ -85,6 +85,35 @@ var adjectives = {
 		z:["zealous", "Zulu", "zesty", "zany", "zoroastrian"]
 };
 
+var names = {
+		a:["Adam's", "Angela's", "Arnold's", "Abe's", "Arthur's", "Anthony's", "Aaron's", "Alex's", "Alexa's", "Angel's", "Amir's", "Alec's", "Andy's", "Alden's", "Abbas's", "Ava's", "Abby's", "Alissa's", "Amber's", "Amy's", "Alice's", "Adele's", "Ana's", "Allie's", "Ann's", "Arianna's", "Arielle's", "Amanda's", "Alicia's", "Anderson's"],
+		b:["Beyonce's", "Brittany's", "Barbara's", "Beth's", "Brooke's", "Becky's", "Brenda's", "Bianca's", "Brianna's", "Bridget's", "Blanche's", "Bridgett's", "Betty's", "Bambi's", "Barbie's", "Ben's", "Brandon's", "Brian's", "Brad's", "Bruce's", "Barry's", "Blake's", "Bill's", "Bob's", "Rob's", "Baron's", "Buck's", "Bernie's", "Bart's"],
+		c:["Chris'", "Cameron's", "Caleb's", "Christian's", "Carl's", "Charles'", "Connor", "Cody's", "Carter's", "Charlie's", "Chad's", "Cory's", "Curt's", "Chloe's", "Claire's", "Caroline's", "Catherine's", "Courtney's", "Christina's", "Christine's", "Chelsea's", "Crystal's", "Cindy's", "Carly's", "Colleen's", "Caitlyn's", "Cathy's", "Carmella's", "Cassiopeia's", "Cleopatra's"],
+		d:["Danielle's", "Daisy's", "Deborah's", "Denise's", "Dakota's", "Dianne's", "Donna's", "Dorothy's", "Daniella's", "Deidra's", "Demi's", "Dina's", "Deanna's", "David's", "Dylan's", "Daniel's", "Dominick's", "Douglas'", "Dustin's", "Dennis'", "Dexter's", "Drew's", "Donald's", "Duke's", "Doug's", "Devon's", "Darwin's", "Demitri's", "Dick's", "Dmitri's", "Donny's", "Dusty's"],
+		e:["Eric's", "Ethan's", "Eli's", "Elijah's", "Edward's", "Elliot's", "Edgar's", "Eugene's", "Evan's", "Edwin's", "Earl's", "Emilio's", "Eddy's", "Errol's", "Esau's", "Edmond's", "Elmo's", "Enrique's", "Erin's", "Elizabeth's", "Emma's", "Emily's", "Evelyn's", "Ellen's", "Erica's", "Ella's", "Eve's", "Eunice's", "Eden's", "Eva's", "Ekko's", "Esme's", ],
+		f:["Faith's", "Fiona's", "Felicia's", "Francesca's", "Fae's", "Flower's", "Franny's", "Frankie's", "Frank's", "Francis'", "Felix's", "Franklin's", "Floyd's", "Fred's", "Freddy's", "Fyodor's", "Falco's", "Fabian's", "Francois'", ],
+		g:["George's", "Gavin's", "Gabriel's", "Giovanni's", "Gale's", "Gerald's", "Glenn's", "Gordon's", "Gus'", "Gabe's", "Guy's", "Greg's", "Gene's", "Giuseppe's", "Gary's", "Grace's", "Gabrielle's", "Gloria's", "Gina's", "Georgia's", "Gwen's", "Ginny's", "Gretel's", "Gail's", "Gemma's", "Gina's", "Gianna's", "Gwenda's"],
+		h:["Heather's", "Hope's", "Holy's", "Hailey's", "Harper's", "Helen's", "Hazel's", "Helena's", "Hannah's", "Hillary's", "Halle's", "Helga's", "Heidi's", "Hedwig's", "Hermoine's", "Henry's", "Harry's", "Hunter's", "Hugo's", "Hector's", "Harold's", "Hugh's", "Herbert's", "Hank's", "Hal's", "Howard's", "Herman's", ],
+		i:["Igor's", "Isaac's", "Ivan's", "Ismael's", "Iggy's", "Ida's", "Isabella's", "Ivy's", "Iris'", "India's", "Ivanka's", "Irene's", "Iona's", "Inari's", "Isis'", ],
+		j:["Jenna's", "Jordan's", "Jessica's", "Jennifer's", "Julia's", "Joy's", "Jasmine's", "Jane's", "Julia's", "Julie's", "Janet's", "Jean's", "June's", "Jill's", "Jackie's", "Judy's", "Joanne's", "Jodi's", "Jade's", "Jaime's", "Janise's", "Jenny's", "James'", "Jacob's", "Jake's", "John's", "Joe's", "Joseph's", "Jesus'", "Justin's", "Jason's", "Jack's", "Jeremy's", "Jose's", "Jesse's", "Jeffrey's", "Jasper's", "Jonah's", "Jude's", "Josh's", "Jay's", "Jaden's", "Javier's", "Jerry's", "Jamal's", "Jimmy's", "Jule's", "Josef's", "Judas'"],
+		k:["Kevin's", "Kyle's", "Kenny's", "Keith's", "Keagan's", "Kirk's", "Karl's", "Kobe's", "Ken's", "Karim's", "Keagan's", "Kendrick's", "Khalid's", "Kim's", "Kayla's", "Kimberly's", "Katherine's", "Kat's", "Kelly's", "Kate's", "Katie's", "Kylie's", "Krystal's", "Kaley's", "Kenya's", "Kimia's"],
+		l:["Lauren's", "Lara's", "Lily's", "Laura's", "Leah's", "Layla's", "Linda's", "Lucy's", "Leslie's", "Leona's", "Leia's", "Lela's", "Luke's", "Lucas'", "Logan's", "Laurence's", "Larry's", "Lorenzo", "Lenny's", "Loki's", "Luigi's", "Luis'"],
+		m:["Mike's", "Michael's", "Matt's", "Matthew's", "Mark's", "Morgan's", "Marcus'", "Miguel's", "Milo's", "Malik's", "Mario's", "Muhammed", "Marco's", "Marvin's", "Max's", "Myle's", "Micky's", "Mulan's", "MacBeth's", "Manny's", "Marie's", "Michelle's", "Melissa's", "Mary's", "Maria's", "Molly's", "Monica's", "Miranda's", "Marissa's", "Maggy's", "Melanie's", "Melinda's", "Mindy", "Margot's", "Maddy's", ],
+		n:["Noel's", "Noah's", "Nathan's", "Nick's", "Nicholas's", "Neil's", "Nico's", "Nigel's", "Nate's", "Norman's", "Neville's", "Nat's", "Nikki's", "Nicole's", "Naomi's", "Nancy's", "Natasha's", "Nadia's", "Noemie's", "Nanny's", "Noora's", ],
+		o:["Olivia's", "Olga's", "Odysseia's", "Odessa's", "Oliver's", "Owen's", "Oscar's", "Otis'", "Otto's", "Oz's", "Olly's", "Omar's", "Oddyseus'", "Oleg's"],
+		p:["Peter's", "Paul's", "Pedro's", "Pablo's", "Patrick's", "Philip's", "Pat's", "Pierre's", "Paige's", "Perseus'", "Pheobe's", "Penelope's", "Pamela's", "Pandora's", "Piper's", "Peggy's", "Phyllis'", "Paula's", "Paris'", "Pearl's"],
+		q:["Quinn's", "Queenie's", "Quincy's", "Quentin's", "Quigley's"],
+		r:["Robert's", "Richard's", "Randy's", "Raymond's", "Roger's", "Ray's", "Ronald's", "Ron's", "Russell's", "Robin's", "Ralph's", "Roy's", "Romeo's", "Reuben's", "Reed's", "Rick's", "Rodney's", "Reuben's", "Roland's", "Remy's", "Rufus'", "Rafael's", "Rachel's", "Rachael's", "Rebecca's", "Ruth's", "Riley's", "Renee's", "Rose's", "Rihanna's", "Ruby's", "Regina's", "Reca's"],
+		s:["Sarah's", "Samantha's", "Sophia's", "Stephanie's", "Sage's", "Savannah's", "Sasha's", "Sabrina's", "Sofia's", "Susan's", "Shannon's", "Skylar's", "Selena's", "Serena's", "Sonia's", "Stacy's", "Shirley's", "Scout's", "Sydney's", "Shae's", "Selina's", "Sacajawea's", "Samuel's", "Scott's", "Shawn's", "Sebastian's", "Steven's", "Simon's", "Spencer's", "Shane's", "Stanley's", "Stewart's", "Sherlock's", "Silvio's", "Socrates'", "Svetlana's"],
+		t:["Tyler's", "Tony's", "Tim's", "Thomas'", "Taylor's", "Teddy's", "Todd's", "Toby's", "Tyrone's", "Titus'", "Trevor's", "Troy's", "Tristan's", "Trayvon's", "Tamir's", "Thad's", "Thor's", "Tyreece's", "Tiffany's", "Tina's", "Tara's", "Theresa's", "Talia's", "Tracy's", "Tammy's", "Terry's", "Trisha's", "Tory's"],
+		u:["Uma's", "Ursula's", "Umberto's", "Ulysses'", "Unity's", "Uganda's", "Usher's"],
+		v:["Victor's", "Vincent's", "Vladimir's", "Vlad's", "Viktor's", "Vishnu's", "Vanessa's", "Victoria's", "Violet's", "Valerie's", "Vivian's", "Virginia's", "Viviana's", "Val's"],
+		w:["Willow's", "Wendy's", "Wanda's", "Winona's", "William's", "Wyatt's", "Wesley's", "Wallace's", "Winston's", "Willace's", "Wes'", "Washington's"],
+		x:["Xander's", "Xavier's", "Xi's", "Xu's", "Xiaoping's", "Xandy's", "Xerxes'", "Xiang's", "Xena's"],
+		y:["Yara's", "Yasmine's", "Yessica's", "Yvonne's", "Yoko's", "Yoshi's", "Yoni's", "Yvanna's", "Yakim's", "Yogi's", "Youssef's", "Yuan's", "Yvan's"],
+		z:["Zach's", "Zachary's", "Zander's", "Zavier's", "Zeke's", "Zenith's", "Zerxes'", "Zeus'", "Zelda's", "Zoe's"]
+};
+
 
 function handleKeyPress(e) {
     var key=e.keyCode || e.which;
@@ -95,62 +124,58 @@ function handleKeyPress(e) {
 }
 
 function find_word(first_letter, list){
-	/* console.log("FINDING NEW WORD");
-	console.log("first_letter = " + first_letter);
-	console.log("list = " + list);
-	console.log("length = " + list[first_letter].length); */
     var rand = Math.floor(Math.random() * ((list[first_letter].length)));
 	return list[first_letter][rand];
 }
 /* 1-Adj 2-Noun 3-Verb 4-noun if end, else adj 5-noun 6-add adverb to verb 7-add adj to front 8-add adj before second noun */
 
-function append_word(new_word) {
-	console.log(new_word);
-	$(".content").append("<h2>" + new_word[0] + "</h2>" + "<p>" + new_word.slice(1) + "</p>");
-	$(".content").append("</br>");
+function append_words(new_words) {
+	for (var i = 0; i < new_words.length; i++) {
+		$(".content").append("<h2>" + new_words[i][0] + "</h2>" + "<p>" + new_words[i].slice(1) + "</p>");
+		$(".content").append("</br>");
+	}
 }
 
 function find_backronym( word ) {
     $(".content").empty();
-    // Access markov database
-    // choose word for starting letter
-    // choose next word based on starting letter
-    // put them all into an array
-    // print said array
- 
+	word_array = [];
     for (var i = 0; i < word.length; i++) {
 		switch (i) {
-			case 0: var new_word = find_word(word[i], adjectives);
-					append_word(new_word);//adj
+			case 0: var new_word = find_word(word[i].toLowerCase(), adjectives);
+					word_array.push(new_word);//adj
 					break;
-			case 1: var new_word = find_word(word[i], nouns);
-					append_word(new_word);//noun
+			case 1: var new_word = find_word(word[i].toLowerCase(), nouns);
+					word_array.push(new_word);//noun
 					break;
-			case 2: var new_word = find_word(word[i], verbs);
-					append_word(new_word);//verb
+			case 2: var new_word = find_word(word[i].toLowerCase(), verbs);
+					word_array.push(new_word);//verb
 					break;
 			case 3: if (i == word.length - 1) {
-						var new_word = find_word(word[i], nouns);
+						var new_word = find_word(word[i].toLowerCase(), nouns);
 					} else {
-						var new_word = find_word(word[i], adjectives)
+						var new_word = find_word(word[i].toLowerCase(), adjectives)
 					}
-					append_word(new_word);// adj or noun
+					word_array.push(new_word); //adj or noun
 					break;
-			case 4: var new_word = find_word(word[i], nouns);
-					append_word(new_word);// noun
+			case 4: var new_word = find_word(word[i].toLowerCase(), nouns);
+					word_array.push(new_word);// noun
 					break;
-			case 5: var new_word = find_word(word[i], adverbs);
-					append_word(new_word);// add adverb
+			case 5: var new_word = find_word(word[i].toLowerCase(), names);
+					word_array.splice(0, 0, new_word);// add posessive to first
 					break;
-			case 6: var new_word = find_word(word[i], adjectives);
-					append_word(new_word);// add adj front
+			case 6: var new_word = find_word(word[i].toLowerCase(), adjectives);
+					word_array.splice(5, 0, new_word);// add adj to second
 					break;
-			case 7: var new_word = find_word(word[i], adjectives);
-					append_word(new_word);// add adj 2
+			case 7: var new_word = find_word(word[i].toLowerCase(), adjectives);
+					word_array.splice(1, 0, new_word);// add adj to first
+					break;
+			case 8: var new_word = find_word(word[i].toLowerCase(), names);
+					word_array.splice(5, 0, new_word); // add possessive to second
 					break;
 		}
         // call spin and find word function?
     }
+	append_words(word_array);
 }
 
 
