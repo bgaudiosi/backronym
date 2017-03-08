@@ -106,7 +106,7 @@ function find_word(first_letter, list){
 
 function append_word(new_word) {
 	console.log(new_word);
-	$(".content").append("<h2>" + new_word[0] + "</h2>" + new_word.slice(1));
+	$(".content").append("<h2>" + new_word[0] + "</h2>" + "<p>" + new_word.slice(1) + "</p>");
 	$(".content").append("</br>");
 }
 

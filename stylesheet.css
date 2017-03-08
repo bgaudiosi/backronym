@@ -55,13 +55,16 @@ h1 {
 
 .user-input {
     margin: 1em;
-    width: 20em;
+	text-align: center;
+    width: 10em;
     height: 2.5em;
     font-size: 18px;
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
+
+
 
 .content {
     color: white;
@@ -74,9 +77,11 @@ h1 {
     text-transform: uppercase;
 }
 
+
 .content>p {
-    font-size: 3em;
+    font-size: 1.5em;
     display: inline;
+
 }
 /* footer content */
 .push, .footer {
