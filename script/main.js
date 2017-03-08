@@ -139,42 +139,150 @@ function append_words(new_words) {
 function find_backronym( word ) {
     $(".content").empty();
 	word_array = [];
-    for (var i = 0; i < word.length; i++) {
-		switch (i) {
-			case 0: var new_word = find_word(word[i].toLowerCase(), adjectives);
-					word_array.push(new_word);//adj
-					break;
-			case 1: var new_word = find_word(word[i].toLowerCase(), nouns);
-					word_array.push(new_word);//noun
-					break;
-			case 2: var new_word = find_word(word[i].toLowerCase(), verbs);
-					word_array.push(new_word);//verb
-					break;
-			case 3: if (i == word.length - 1) {
-						var new_word = find_word(word[i].toLowerCase(), nouns);
-					} else {
-						var new_word = find_word(word[i].toLowerCase(), adjectives)
-					}
-					word_array.push(new_word); //adj or noun
-					break;
-			case 4: var new_word = find_word(word[i].toLowerCase(), nouns);
-					word_array.push(new_word);// noun
-					break;
-			case 5: var new_word = find_word(word[i].toLowerCase(), names);
-					word_array.splice(0, 0, new_word);// add posessive to first
-					break;
-			case 6: var new_word = find_word(word[i].toLowerCase(), adjectives);
-					word_array.splice(5, 0, new_word);// add adj to second
-					break;
-			case 7: var new_word = find_word(word[i].toLowerCase(), adjectives);
-					word_array.splice(1, 0, new_word);// add adj to first
-					break;
-			case 8: var new_word = find_word(word[i].toLowerCase(), names);
-					word_array.splice(5, 0, new_word); // add possessive to second
-					break;
+	console.log(word.length);
+	if (word.length < 6) {
+		for (var i = 0; i < word.length; i++) {
+			console.log("word.length = " + word.length + " i = " + i);
+			switch (i) {
+				case 0: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 1: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);//noun
+						break;
+				case 2: var new_word = find_word(word[i].toLowerCase(), verbs);
+						word_array.push(new_word);//verb
+						break;
+				case 3: if (i == word.length - 1) {
+							var new_word = find_word(word[i].toLowerCase(), nouns);
+						} else {
+							var new_word = find_word(word[i].toLowerCase(), adjectives)
+						}
+						word_array.push(new_word); //adj or noun
+						break;
+				case 4: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);// noun
+						break;
+			}
 		}
+	} else if (word.length == 6) {
+		for (var i = 0; i < word.length; i++) {
+			console.log("word.length = " + word.length + " i = " + i);
+			switch (i) {
+				case 0: var new_word = find_word(word[i].toLowerCase(), names);
+						word_array.push(new_word);
+						break;
+				case 1: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 2: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);//noun
+						break;
+				case 3: var new_word = find_word(word[i].toLowerCase(), verbs);
+						word_array.push(new_word);//verb
+						break;
+				case 4: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 5: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);// noun
+						break;
+			}
+			console.log("new_word = " + word_array);
+		}
+	} else if (word.length == 7) {
+		console.log("word.length = " + word.length + " i = " + i);
+		for (var i = 0; i < word.length; i++) {
+			switch(i) {
+				case 0: var new_word = find_word(word[i].toLowerCase(), names);
+						word_array.push(new_word);
+						break;
+				case 1: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 2: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);//noun
+						break;
+				case 3: var new_word = find_word(word[i].toLowerCase(), verbs);
+						word_array.push(new_word);//verb
+						break;
+				case 4: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 5: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 6: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);// noun
+						break;
+			}
+		}
+	} else if (word.length == 8) {
+		for (var i = 0; i < word.length; i++) {
+			console.log("word.length = " + word.length + " i = " + i);
+			switch(i) {
+				case 0: var new_word = find_word(word[i].toLowerCase(), names);
+						word_array.push(new_word);
+						break;
+				case 1: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 2: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 3: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);//noun
+						break;
+				case 4: var new_word = find_word(word[i].toLowerCase(), verbs);
+						word_array.push(new_word);//verb
+						break;
+				case 5: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 6: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 7: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);// noun
+						break;
+			}
+		}
+	} else if (word.length == 9) {
+		for (var i = 0; i < word.length; i++) {
+			console.log("word.length = " + word.length + " i = " + i);
+			switch(i) {
+				case 0: var new_word = find_word(word[i].toLowerCase(), names);
+						word_array.push(new_word); //possessive
+						break;
+				case 1: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 2: var new_word = find_word(word[i].toLowerCase(), adjectives);
+						word_array.push(new_word);//adj
+						break;
+				case 3: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);//noun
+						break;
+				case 4: var new_word = find_word(word[i].toLowerCase(), verbs);
+						word_array.push(new_word);//verb
+						break;
+				case 5:	var new_word = find_word(word[i].toLowerCase(), names);
+						word_array.push(new_word); //possessive
+				case 6: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 7: var new_word = find_word(word[i].toLowerCase(), adjectives)
+						word_array.push(new_word); //adj
+						break;
+				case 8: var new_word = find_word(word[i].toLowerCase(), nouns);
+						word_array.push(new_word);// noun
+						break;
+			}
+		}
+	} else {
+		console.log("Invalid input");
+	}
         // call spin and find word function?
-    }
 	append_words(word_array);
 }
 
