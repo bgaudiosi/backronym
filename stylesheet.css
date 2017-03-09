@@ -114,7 +114,12 @@ h1{
 	text-align: center;
 	background-color: #333;
 	line-height: 50px;
-
+}
+.footer>p, .footer>.fb-share-button{
+	display: inline;
+}
+.fb-share-button>a {
+	color: white;
 }
 
 
