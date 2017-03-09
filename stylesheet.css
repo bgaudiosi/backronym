@@ -84,18 +84,22 @@ h1{
 
 .content {
     color: white;
-    margin-left: 10em;
+    text-align: center;
 	padding-bottom: 3em; /* same height as footer */
 }
+
+
+
+
 .content>h2{
-    font-size: 4em;
+    font-size: 5em;
     display: inline;
     text-transform: uppercase;
 }
 
 
 .content>p {
-    font-size: 1.5em;
+    font-size: 2em;
     display: inline;
 
 }

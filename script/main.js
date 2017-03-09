@@ -131,7 +131,12 @@ function find_word(first_letter, list){
 
 function append_words(new_words) {
 	for (var i = 0; i < new_words.length; i++) {
-		$(".content").append("<h2>" + new_words[i][0] + "</h2>" + "<p>" + new_words[i].slice(1) + "</p>");
+		var $first_letter = $("<h2></h2>").text(new_words[i][0]);
+		/*$($first_letter).toggleClass("content"); */
+		var $rest= $("<p></p>").text(new_words[i].slice(1));
+		/* $($rest).toggleClass("content"); */
+		$(".content").append($first_letter);
+		$(".content").append($rest);
 		$(".content").append("</br>");
 	}
 }
@@ -139,7 +144,6 @@ function append_words(new_words) {
 function find_backronym( word ) {
     $(".content").empty();
 	word_array = [];
-	console.log(word.length);
 	if (word.length < 6) {
 		for (var i = 0; i < word.length; i++) {
 			console.log("word.length = " + word.length + " i = " + i);
