@@ -114,13 +114,17 @@ var names = {
 		z:["Zach's", "Zachary's", "Zander's", "Zavier's", "Zeke's", "Zenith's", "Zerxes'", "Zeus'", "Zelda's", "Zoe's"]
 };
 
-
 function handleKeyPress(e) {
-    var key=e.keyCode || e.which;
+	var key=e.keyCode || e.which;
     if (key == 13) {
         $input = $('.user-input').val();
-        find_backronym($input);
-    }
+		if ($input.search(/[^a-zA-Z]+/) === -1) {
+			find_backronym($input);
+		} else {
+			alert("Please enter only letters, and only from ASCII.");
+		}
+	}
+	
 }
 
 function find_word(first_letter, list){
@@ -132,9 +136,7 @@ function find_word(first_letter, list){
 function append_words(new_words) {
 	for (var i = 0; i < new_words.length; i++) {
 		var $first_letter = $("<h2></h2>").text(new_words[i][0]);
-		/*$($first_letter).toggleClass("content"); */
 		var $rest= $("<p></p>").text(new_words[i].slice(1));
-		/* $($rest).toggleClass("content"); */
 		$(".content").append($first_letter);
 		$(".content").append($rest);
 		$(".content").append("</br>");
@@ -146,7 +148,7 @@ function find_backronym( word ) {
 	word_array = [];
 	if (word.length < 6) {
 		for (var i = 0; i < word.length; i++) {
-			console.log("word.length = " + word.length + " i = " + i);
+			//console.log("word.length = " + word.length + " i = " + i);
 			switch (i) {
 				case 0: var new_word = find_word(word[i].toLowerCase(), adjectives);
 						word_array.push(new_word);//adj
@@ -171,7 +173,7 @@ function find_backronym( word ) {
 		}
 	} else if (word.length == 6) {
 		for (var i = 0; i < word.length; i++) {
-			console.log("word.length = " + word.length + " i = " + i);
+			//console.log("word.length = " + word.length + " i = " + i);
 			switch (i) {
 				case 0: var new_word = find_word(word[i].toLowerCase(), names);
 						word_array.push(new_word);
@@ -195,7 +197,7 @@ function find_backronym( word ) {
 			console.log("new_word = " + word_array);
 		}
 	} else if (word.length == 7) {
-		console.log("word.length = " + word.length + " i = " + i);
+		//console.log("word.length = " + word.length + " i = " + i);
 		for (var i = 0; i < word.length; i++) {
 			switch(i) {
 				case 0: var new_word = find_word(word[i].toLowerCase(), names);
@@ -223,7 +225,7 @@ function find_backronym( word ) {
 		}
 	} else if (word.length == 8) {
 		for (var i = 0; i < word.length; i++) {
-			console.log("word.length = " + word.length + " i = " + i);
+			//console.log("word.length = " + word.length + " i = " + i);
 			switch(i) {
 				case 0: var new_word = find_word(word[i].toLowerCase(), names);
 						word_array.push(new_word);
@@ -253,7 +255,7 @@ function find_backronym( word ) {
 		}
 	} else if (word.length == 9) {
 		for (var i = 0; i < word.length; i++) {
-			console.log("word.length = " + word.length + " i = " + i);
+			//console.log("word.length = " + word.length + " i = " + i);
 			switch(i) {
 				case 0: var new_word = find_word(word[i].toLowerCase(), names);
 						word_array.push(new_word); //possessive
